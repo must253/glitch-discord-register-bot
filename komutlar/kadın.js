@@ -57,7 +57,7 @@ let kadınRol2 = '828319535027191869' //Verilecek
   let toplam = await db.fetch(`kayıttoplam_${message.author.id}`) + 1 || '0'
 const emoji = client.emojis.find(emoji => emoji.name === "5_");
 
-  if(kayıtlımı !== 'evet') {
+   {
   db.add(`kayıtk_${message.author.id}`, 1)  //CodeArius
   db.add(`kayıttoplam_${message.author.id}` , 1)
   db.set(`kayıtlıkişi_${member}`, 'evet')
@@ -78,25 +78,7 @@ const emoji = client.emojis.find(emoji => emoji.name === "5_");
       message.channel.send(embed)
 message.guild.channels.get('828936755239059456').send(`**Bir Kullanıcı Kayıt Oldu ${member} ** ` ).then(msg => msg.delete({timeout: 100000}));  
   }
-  if(kayıtlımı === 'evet'){
-  db.set(`kayıtlıisim_${member}`, toplamaisim)
-  db.push(`eskiad_${member.id}`, toplamaisim)
-  db.add(`toplamik_${member.id}`, 1)
-    let embed = new Discord.RichEmbed()
-  .setColor('f5f5f5')
-  .setDescription(` **Bu kişi daha önceden de kayıt edilmiş!**
-
-**Kullanıcı daha önce bu isimle kayıt edilmiş!** \`${eskiismi}\``)
-  .setAuthor(client.user.username, client.user.avatarURL)
-  .setTimestamp()
-  .setFooter('✩ B I T C H E S')
-  .setThumbnail("")
-message.react('834904198520504361')
-    message.channel.send(embed)
-    
-
-    
-  }
+ 
 };
 
 exports.conf = {
