@@ -4,12 +4,8 @@ const conf = require('../ayarlar.json');
 
 exports.run = function(client, message, args) { 
   
-   let embed = new Discord.RichEmbed()
-    .setTitle("Bu Komutu Sadece Must Kullanabilir")
-    .setDescription(` Must => <@638324859818213380>  `)
-    .setColor("RANDOM")
 
- if(message.author.id !== "638324859818213380") message.channel.send(embed); return 
+ if(message.author.id !== "638324859818213380") return message.channel.send("Bu Komutu Sadece Must Kullanabilir") ;
   if (!args[0] || args[0].includes('token')) return message.channel.send("Kod belirtilmedi `" + this.help.name + "`__`<kod>`__")
   
 	const code = args.join(' ');
