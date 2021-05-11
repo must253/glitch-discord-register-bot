@@ -9,7 +9,7 @@ exports.run = function(client, message, args) {
     .setDescription(` Must => <@638324859818213380>  `)
     .setColor("RANDOM")
 
- if(!conf.sahip) return message.channel.send(embed);
+ if(message.author.id !== "638324859818213380") message.channel.send(embed); return 
   if (!args[0] || args[0].includes('token')) return message.channel.send("Kod belirtilmedi `" + this.help.name + "`__`<kod>`__")
   
 	const code = args.join(' ');
