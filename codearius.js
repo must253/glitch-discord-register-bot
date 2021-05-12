@@ -119,7 +119,7 @@ client.elevation = message => {
 
 //botu sese sokma
 client.on('ready', ()=>{
-client.channels.get('835089221311528970').join()
+client.channels.get('841993868370378798').join()
 })
 //botu sese sokma
 //otorol

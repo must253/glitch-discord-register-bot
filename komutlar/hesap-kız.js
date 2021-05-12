@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
 let kayityetkili = '828319529666215966' //Yetkili
 let codeariusver = '829680768888340551' //Verilecek
 let codeariusal = '828319540008976384' //Alınacak
-let isimön = '⍢' //İsmin önüne gelecek simge,tag   
+let isimön = '〥' //İsmin önüne gelecek simge,tag   
 let kadınRol = '831913472764674058' //Verilecek
 let kadınRol2 = '828319535027191869' //Verilecek
 let hesapROL = '836711087130542141'
