@@ -5,13 +5,13 @@ const ayarlar = require('../ayarlar.json')
 const settings = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
-let kayityetkili = '828319529666215966' //Yetkili
-let codeariusver = '829680787979763712' //Verilecek
-let codeariusal = '828319540008976384' //Alınacak
+let kayityetkili = '841993868344819713' //Yetkili
+let codeariusver = '841993868324765723' //Verilecek
+let codeariusal = '841993868307857427' //Alınacak
 let isimön = '〥' //İsmin önüne gelecek simge,tag   
-let erkekROL = '831913287117045791' 
+let erkekROL = '841993868324765721' 
 let erkekROL2 = '828319535919792149' 
-let hesapROL = '836711087130542141'
+let hesapROL = '841993868324765719'
 
 
  let embed = new Discord.RichEmbed()
