@@ -7,7 +7,7 @@ const settings = require("../ayarlar.json");
 exports.run = async (client, message, args) => {
 let kayityetkili = '841993868344819713' //Yetkili
 let codeariusver = '841993868324765723' //Verilecek
-let codeariusal = '841993868307857427' //Alınacak
+let codeariusal = '841993868344819713' //Alınacak
 let isimön = '〥' //İsmin önüne gelecek simge,tag   
 let erkekROL = '841993868324765721' 
 let erkekROL2 = '828319535919792149' 
@@ -57,7 +57,6 @@ if(!message.member.roles.has(kayityetkili))
   
   //CodeArius
 let toplam = await db.fetch(`kayıttoplam_${message.author.id}`) + 1 || '0'
-const emoji = client.emojis.find(emoji => emoji.name === "5_");
 
   if(kayıtlımı !== 'evet') {
   db.add(`kayıte_${message.author.id}`, 1)  //CodeArius
