@@ -4,8 +4,8 @@ const settings = require('../ayarlar.json')
   //CodeArius
 exports.run = async (client, message, args) => {
 let kayityetkili = settings.register //Yetkili
-let codeariusver = '842418432905183250' //Verilecek
-let codeariusal = '841993868307857427' //Alınacak
+let codeariusver = '842418432916848656' //Verilecek
+let codeariusal = '842418432905183250' //Alınacak
 let isimön = '☥' //İsmin önüne gelecek simge,tag   
 let kadınRol = '842418432916848654' //Verilecek
 let kadınRol2 = '842418432916848652' //Verilecek
@@ -35,7 +35,7 @@ let kadınRol2 = '842418432916848652' //Verilecek
   
     //CodeArius
   setTimeout(function(){
-  member.setNickname(`${isimön} ${isim}  ${yaş}`)
+  member.setNickname(`${isimön} ${isim} | ${yaş}`)
   },1000)
   setTimeout(function(){
   member.addRole(kadınRol  )  //CodeArius
@@ -69,11 +69,10 @@ const emoji = client.emojis.find(emoji => emoji.name === "5_");
 `)
   .setAuthor(client.user.username, client.user.avatarURL)
   .setTimestamp()
-  .setFooter('✩ B I T C H E S')
+ .setFooter(client.user.tag)
   .setThumbnail("")
- message.react('823290747217248306');
       message.channel.send(embed)
-message.guild.channels.get('828936755239059456').send(`**Bir Kullanıcı Kayıt Oldu ${member} ** ` ).then(msg => msg.delete({timeout: 100000}));  
+message.guild.channels.get('842418433756233746').send(`**Bir Kullanıcı Kayıt Oldu ${member} ** ` ) 
   }
  
 };

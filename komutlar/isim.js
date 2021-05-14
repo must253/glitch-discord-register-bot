@@ -17,7 +17,6 @@ exports.run = async (client, message, args) => {
   
 if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) return message.channel.send(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`).then(x => x.delete({ timeout: 6500 }));
 
-  if (message.channel.id !== settings.registerChannel) return message.channel.send(embed)
 
     let isim = args[1]
   let yaş = args[2]
@@ -34,7 +33,7 @@ if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cach
   if (!age) return message.channel.send("İsmini değiştireceğin kişinin yaşını yazmalısın.")
 
   
-    member.setNickname(`${isimön} ${isim}  ${yaş}`)
+    member.setNickname(`${isimön} ${isim} | ${yaş}`)
  let isimdeğiştikvola = new Discord.RichEmbed()
       .setColor('f5f5f5') //CodeArius
       .setDescription(`Etiketlenen kişinin ismi Başarıyla **${isimön} ${isim} | ${yaş}** Olarak Değiştirildi`)

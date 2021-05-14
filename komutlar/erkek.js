@@ -36,7 +36,7 @@ if(!message.member.roles.has(kayityetkili))
   if (isNaN(yaş)) return message.channel.send('Yaş sadece sayı olarak kabul edilir.')
   //CodeArius
   setTimeout(function(){
-  member.setNickname(`${isimön} ${isim}  ${yaş}`)
+  member.setNickname(`${isimön} ${isim} | ${yaş}`)
   },1000)
   setTimeout(function(){
   member.addRole(codeariusver)  
@@ -72,7 +72,7 @@ let toplam = await db.fetch(`kayıttoplam_${message.author.id}`) + 1 || '0'
 `)
   .setAuthor(client.user.username, client.user.avatarURL)
   .setTimestamp()
-  .setFooter('✩ B I T C H E S')
+  .setFooter(client.user.username + '#' + client.user.tag)
   .setThumbnail("")
 message.channel.send(embed)
 
@@ -90,9 +90,8 @@ message.channel.send(embed)
 **Kullanıcı daha önce bu isimle kayıt edilmiş!** \`${eskiismi}\``)
   .setAuthor(client.user.username, client.user.avatarURL)
   .setTimestamp()
-  .setFooter('✩ B I T C H E S')
+  .setFooter(client.user.tag)
   .setThumbnail("")
-    message.react('834904198520504361')
 
 message.channel.send(embed)
     
