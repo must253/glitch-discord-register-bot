@@ -6,11 +6,11 @@ const settings = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
 let kayityetkili = '841993868344819713' //Yetkili
-let codeariusver = '841993868324765723' //Verilecek
+let codeariusver = '842418432916848655' //Verilecek
 let codeariusal = '841993868344819713' //Alınacak
 let isimön = '〥' //İsmin önüne gelecek simge,tag   
-let erkekROL = '841993868324765721' 
-let erkekROL2 = '828319535919792149' 
+let erkekROL = '842418432916848653' 
+let erkekROL2 = '842418432916848651' 
 let hesapROL = '841993868324765719'
 
 

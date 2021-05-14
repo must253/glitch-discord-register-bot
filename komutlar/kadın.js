@@ -4,11 +4,11 @@ const settings = require('../ayarlar.json')
   //CodeArius
 exports.run = async (client, message, args) => {
 let kayityetkili = '828319529666215966' //Yetkili
-let codeariusver = '841993868324765724' //Verilecek
+let codeariusver = '842418432916848656' //Verilecek
 let codeariusal = '841993868307857427' //Alınacak
 let isimön = '〥' //İsmin önüne gelecek simge,tag   
-let kadınRol = '841993868324765722' //Verilecek
-let kadınRol2 = '841993868324765720' //Verilecek
+let kadınRol = '842418432916848654' //Verilecek
+let kadınRol2 = '842418432916848652' //Verilecek
 
 
  let embed = new Discord.RichEmbed()
