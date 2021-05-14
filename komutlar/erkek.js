@@ -5,9 +5,9 @@ const ayarlar = require('../ayarlar.json')
 const settings = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
-let kayityetkili = '842418432937951264' //Yetkili
-let codeariusver = '842418432905183250' //Verilecek
-let codeariusal = '841993868344819713' //Alınacak
+let kayityetkili = ayarlar.register //Yetkili
+let codeariusver = '842418432916848655' //Verilecek
+let codeariusal = '842418432905183250' //Alınacak
 let isimön = '☥' //İsmin önüne gelecek simge,tag   
 let erkekROL = '842418432916848653' 
 let erkekROL2 = '842418432916848651' 
@@ -39,11 +39,13 @@ if(!message.member.roles.has(kayityetkili))
   member.setNickname(`${isimön} ${isim}  ${yaş}`)
   },1000)
   setTimeout(function(){
-  member.addRole(codeariusver)  //CodeArius
+  member.addRole(codeariusver)  
   },2000)
-  member.removeRole(codeariusal)  
    setTimeout(function(){
-  member.addRole(erkekROL2)  //CodeArius
+  member.removeRole(codeariusal)  
+  },2000)
+   setTimeout(function(){
+  member.addRole(erkekROL2)  
   },4000)
   setTimeout(function(){
   member.addRole(erkekROL)  //CodeArius
@@ -72,7 +74,6 @@ let toplam = await db.fetch(`kayıttoplam_${message.author.id}`) + 1 || '0'
   .setTimestamp()
   .setFooter('✩ B I T C H E S')
   .setThumbnail("")
-      message.react('840922075094581268');
 message.channel.send(embed)
 
     message.guild.channels.get('828936755239059456').send(`**Bir Kullanıcı Kayıt Oldu ${member} ** ` ).then(msg => msg.delete({timeout: 100000}));

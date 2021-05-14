@@ -3,7 +3,7 @@ const db = require('quick.db')
 const settings = require('../ayarlar.json')
   //CodeArius
 exports.run = async (client, message, args) => {
-let kayityetkili = '842418432937951264' //Yetkili
+let kayityetkili = settings.register //Yetkili
 let codeariusver = '842418432905183250' //Verilecek
 let codeariusal = '841993868307857427' //Alınacak
 let isimön = '☥' //İsmin önüne gelecek simge,tag   
