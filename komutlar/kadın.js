@@ -3,10 +3,10 @@ const db = require('quick.db')
 const settings = require('../ayarlar.json')
   //CodeArius
 exports.run = async (client, message, args) => {
-let kayityetkili = '828319529666215966' //Yetkili
-let codeariusver = '842418432916848656' //Verilecek
+let kayityetkili = '842418432937951264' //Yetkili
+let codeariusver = '842418432905183250' //Verilecek
 let codeariusal = '841993868307857427' //Alınacak
-let isimön = '〥' //İsmin önüne gelecek simge,tag   
+let isimön = '☥' //İsmin önüne gelecek simge,tag   
 let kadınRol = '842418432916848654' //Verilecek
 let kadınRol2 = '842418432916848652' //Verilecek
 
@@ -43,10 +43,7 @@ let kadınRol2 = '842418432916848652' //Verilecek
     setTimeout(function(){
   member.addRole(codeariusver)  //CodeArius
   },2000)
-  
-  setTimeout(function(){
   member.removeRole(codeariusal)
-  },5000)
   setTimeout(function(){
   member.addRole(kadınRol2)  //CodeArius
   },4000)

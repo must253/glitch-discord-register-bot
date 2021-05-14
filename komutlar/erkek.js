@@ -5,10 +5,10 @@ const ayarlar = require('../ayarlar.json')
 const settings = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
-let kayityetkili = '841993868344819713' //Yetkili
-let codeariusver = '842418432916848655' //Verilecek
+let kayityetkili = '842418432937951264' //Yetkili
+let codeariusver = '842418432905183250' //Verilecek
 let codeariusal = '841993868344819713' //Alınacak
-let isimön = '〥' //İsmin önüne gelecek simge,tag   
+let isimön = '☥' //İsmin önüne gelecek simge,tag   
 let erkekROL = '842418432916848653' 
 let erkekROL2 = '842418432916848651' 
 let hesapROL = '841993868324765719'
@@ -40,17 +40,14 @@ if(!message.member.roles.has(kayityetkili))
   },1000)
   setTimeout(function(){
   member.addRole(codeariusver)  //CodeArius
-  },3000)
-    setTimeout(function(){
-  member.removeRole(codeariusal)
   },2000)
-    
+  member.removeRole(codeariusal)  
    setTimeout(function(){
   member.addRole(erkekROL2)  //CodeArius
-  },5000)
+  },4000)
   setTimeout(function(){
   member.addRole(erkekROL)  //CodeArius
-  },4000)
+  },3000)
  
 
   

@@ -1,6 +1,6 @@
 exports.run = function(client, message, args) {
   
-message.channel.send('〥')
+message.channel.send('☥')
 
 }
 
