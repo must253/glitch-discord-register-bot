@@ -72,7 +72,7 @@ const emoji = client.emojis.find(emoji => emoji.name === "5_");
  .setFooter(client.user.tag)
   .setThumbnail("")
       message.channel.send(embed)
-message.guild.channels.get('842418433756233746').send(`**Bir Kullanıcı Kayıt Oldu ${member} ** ` ) 
+message.guild.channels.get('842418433756233746').send(`**${member} aramıza katıldı.** ` ) 
   }
  
 };
