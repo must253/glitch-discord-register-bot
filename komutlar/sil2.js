@@ -13,9 +13,8 @@ exports.run = function(client, message, args) {
   if (isNaN(x)) return message.channel.send("Geçersiz argüman! `sil-üye <kullanıcı> <sayı>`")
   
   if (x < 1) return message.channel.send("``1`` adetten az mesaj silemem!")
-  if (x > 100) return message.channel.send("``100`` adetten fazla mesaj silemem!")
   
- var fetched =  message.channel.messages.fetch({limit: x})
+ var fetched =  message.channel.messages
   
   if (u) {
     var fetched = fetched.filter(m => m.author.id === u.id)
