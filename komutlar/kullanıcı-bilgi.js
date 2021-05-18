@@ -39,7 +39,7 @@ must.locale("tr")
         message.author.username + "#" + message.author.discriminator
       )
       .addField("ID:", message.author.id)
-      .addField("Kayıt tarihi:", must(message.author.createdAt).fromNow())
+      .addField("Kayıt tarihi:", must(message.author.createdAt).format("DD MMMM YYYY") + `(${must(message.author.createdAt).fromNow()})` )
       .addField("Durum:", durm)
       .addField(
         "Şu an oynadığı oyun:",
