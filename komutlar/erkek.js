@@ -76,7 +76,7 @@ let toplam = await db.fetch(`kayıttoplam_${message.author.id}`) + 1 || '0'
   .setThumbnail("")
 message.channel.send(embed)
 
-    message.guild.channels.get('828936755239059456').send(`**${member} aramıza katıldı.** ` )
+  message.guild.channels.get('842418433756233746').send(`**${member} aramıza katıldı.** ` ) 
 }
 
   if(kayıtlımı === 'evet'){
