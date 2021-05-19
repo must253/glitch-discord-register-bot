@@ -30,13 +30,10 @@ exports.run = function(client, message, args) {
   if (!cvp) return message.channel.send(cvp2)
   
 let cezarolu = settings.registerer 
-  
-  let embed = new Discord.RichEmbed()
+   let embed = new Discord.RichEmbed()
     .setTitle("")
     .setDescription(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`)
     .setColor("RANDOM")
-    message.channel.send(embed)
-
 
   
   
