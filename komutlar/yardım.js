@@ -32,7 +32,7 @@ let cezarolu = settings.registerer
   
   
   
-  let embed2 = new Discord.RichEmbed()
+if(args[0] === 'kayıt') {  let embed2 = new Discord.RichEmbed()
     .setTitle("Kayıt Komutları")
     .setDescription(`Selam! Bu bot sunucundaki üyeleri kolayca kayıt edebilmen için tasarlandı. Aşağıda komutların genel bilgisine ulaşabilirsin.
   __**Erkek Üye Kayıdı**__
@@ -46,7 +46,24 @@ __**Kaydedilenleri Görmek İçin**__
 `)
     .setColor("RANDOM")
 
-  message.channel.send(embed2)
+  message.channel.send(embed2)}
+  
+   if(args[0] === 'eğlence') {
+      let müzik = [`!wasted => profil fotonuza wasted efektini ekler`]; 
+   
+      const müzikE = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(client.user.avatarURL)
+.setDescription(`__**!wasted**__
+\`>\`profil fotonuza wasted efektini ekler 
+__**!hapishane**__
+\`>\`profil fotonuza hapishane efektini ekler
+__**!hapishane**__
+`)
+   
+   message.channel.send(müzikE)
+   }
+  
 }
 exports.conf = {
   enabled: true,
