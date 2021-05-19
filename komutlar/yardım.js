@@ -17,6 +17,17 @@ exports.run = function(client, message, args) {
   
   
   
+      const cvp2 = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(client.user.avatarURL)
+.setDescription(`__**Kayıt Yardımını Görmek İçin**__
+ \`>\`!yardım kayıt
+ __**Eğlence Yardımını Görmek İçin**__
+ \`>\`!yardım eğlence`)
+  
+    let cvp = args[0]
+
+  if (!cvp) return message.channel.send(cvp2)
   
 let cezarolu = settings.registerer 
   
@@ -24,11 +35,10 @@ let cezarolu = settings.registerer
     .setTitle("")
     .setDescription(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`)
     .setColor("RANDOM")
+    message.channel.send(embed)
+
+
   
-
-
-  if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) return message.channel.send(embed).then(x => x.delete({ timeout: 6500 }));
-
   
   
   
