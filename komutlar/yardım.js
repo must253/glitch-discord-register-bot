@@ -58,8 +58,10 @@ __**Kaydedilenleri Görmek İçin**__
 \`>\`profil fotonuza wasted efektini ekler 
 __**!hapishane**__
 \`>\`profil fotonuza hapishane efektini ekler
-__**!hapishane**__
-`)
+__**!aşkölçer**__
+\`>\`etiketlediğiniz kişi ile aranızdaki ilişkiyi ölçer
+__**!kapaklaflar**__
+\`>\`etiketlediğiniz kişiye özlü sözlü laflar söyler`)
    
    message.channel.send(müzikE)
    }
