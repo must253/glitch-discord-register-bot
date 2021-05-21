@@ -68,7 +68,9 @@ __**!hapishane**__
 __**!aşkölçer**__
 \`>\`etiketlediğiniz kişi ile aranızdaki ilişkiyi ölçer
 __**!kapaklaflar**__
-\`>\`etiketlediğiniz kişiye özlü sözlü laflar söyler`)
+\`>\`etiketlediğiniz kişiye özlü sözlü laflar söyler
+__**.yazı-yarışı**__
+\`>\`Etiketlediğiniz kişiyle "kim daha hızlı yazar" oyunu oynarsınız`)
    
    message.channel.send(müzikE)
    }
