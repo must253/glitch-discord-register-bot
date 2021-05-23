@@ -151,44 +151,10 @@ client.login(process.env.token);
 //hg-bb
 
 
-//küfür engel //
-client.on("message", async msg => {
-  
-  
- const i = await db.fetch(`küfürE_${msg.guild.id}`)
-    if (i == "acik") {
-        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq","göt",];
-         
-                  msg.delete();
-                          
-                      return msg.reply('Bu Sunucuda Küfür Filtresi Aktiftir.')
-                         
-          
-            
-        
-    }
-    if (!i) return;
-});
-
-client.on("messageUpdate", (oldMessage, newMessage) => {
-  
-  
- const i = db.fetch(`${oldMessage.guild.id}.kufur`)
-    if (i) {
-        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq","göt",];
-     
-          try {
-            if (!oldMessage.member.hasPermission("BAN_MEMBERS")) {
-                  oldMessage.delete();
-                          
-                      return oldMessage.reply('Bu Sunucuda Küfür Filtresi Aktiftir.').then(msg => msg.delete(5000));
-            }              
-          } catch(err) {
-            console.log(err);
-          }
-        
-    }
-    if (!i) return;
-});
 
 //küfür engel
+
+client.ayarlar = {
+  
+    prefix: "!"
+}

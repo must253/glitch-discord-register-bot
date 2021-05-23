@@ -65,7 +65,7 @@ exports.run = async (client, message) => {
 	exports.conf = {
 		enabled: true,
 		guildOnly: false,
-		aliases: ['küfür-engel2'],
+		aliases: ['küfür-engel'],
 		permLevel: 4,
     kategori: "ayarlar",
 	};
