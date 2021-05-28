@@ -56,7 +56,6 @@ if(!message.member.roles.has(kayityetkili))
   .setColor('f5f5f5')  //CodeArius
   .setDescription(`${member} kişisinden <@&${codeariusal}> rolü alınıp <@&${codeariusver}> , <@&${erkekROL}> , <@&${erkekROL2}> rolleri verildi.
 
-<@!${message.author.id}> **Kişisinin toplam** ${toplam} **adet teyiti oldu.**
 `)
   .setAuthor(client.user.username, client.user.avatarURL)
   .setTimestamp()
@@ -71,8 +70,8 @@ message.channel.send(embed2)
     
     
      
-  }
-};  //CodeArius
+  
+;  //CodeArius
 
 exports.conf = {
   enabled: true,
