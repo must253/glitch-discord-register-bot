@@ -70,7 +70,8 @@ __**!aşkölçer**__
 __**!kapaklaflar**__
 \`>\`etiketlediğiniz kişiye özlü sözlü laflar söyler
 __**.yazı-yarışı**__
-\`>\`Etiketlediğiniz kişiyle "kim daha hızlı yazar" oyunu oynarsınız`)
+\`>\`Etiketlediğiniz kişiyle "kim daha hızlı yazar" oyunu oynarsınız
+__**!wasted**__`)
    
    message.channel.send(müzikE)
    }
