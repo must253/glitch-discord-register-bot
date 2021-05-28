@@ -9,8 +9,7 @@ module.exports.run = async (bot, message, args) => {
         if (!message.guild) user = message.author;
 
         Jimp.read(user.avatarURL, (err, image) => {
-            image.resize(295, 295)
-            image.gaussian(3).write(`./avatarr/${user.id}.png`);
+            image.resize(295, 295).write(`./avatarr/${user.id}.png`);
           setTimeout(function() {
                     message.channel.send(new Discord.Attachment(`./avatarr/${user.id}.png`));
                 }, 1000);
@@ -21,14 +20,14 @@ module.exports.run = async (bot, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ["avatar","av"],
   permLevel: 0,
 
   kategori: "efekt"
 };
 
 exports.help = {
-  name: 'avatarr',
+  name: 'avatar',
   description: 'Avatarınıza Wasted efekti verir.',
-  usage: 'avatarr veya wasted <@kullanıcı>'
+  usage: 'avatar <@kullanıcı>'
 };
