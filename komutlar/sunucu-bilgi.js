@@ -1,34 +1,26 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-
-exports.run = function(client, message, args) {
-   
-  let user = message.mentions.users.first() || message.author;
-
-  
-  
-  let embed = new Discord.RichEmbed()
-    .setAuthor(`${client.user.username} `, client.user.displayAvatarURL)
-    .setTitle(` <a:820063266892939274:835268482933194772> İşte Sunucunun Toplam Üyeleri =>${message.member.guild.memberCount}`)
-    .setDescription(`Online Olan Kullanıcılar => ${message.guild.members.filter(m => m.user.presence.status === "online").size}
-    Boşta Olan Kullanıcılar => ${message.guild.members.filter(m => m.user.presence.status === "idle").size}
-    Rahatsız Edilmek İstemeyen Kullanıcılar =>  ${message.guild.members.filter(m => m.user.presence.status === "dnd").size}
-    Toplam Bot => ${message.guild.members.filter(m => m.user.bot).size}`)
-    .setColor("RANDOM")
-  .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.displayAvatarURL)
-  
-message.channel.send(embed);
-  
-}  
-exports.conf = {
+module.exports.run = async (bot, message, args) => {
+    let üyesayi = message.guild.memberCount;
+    let botlar = message.guild.members.filter(m => m.user.bot).size;
+    let kullanıcılar = üyesayi - botlar;
+const embed = new Discord.RichEmbed()
+.setColor(`#CE2D0B`)
+.setTimestamp()
+.addField(`Toplam Üye`, `**${üyesayi}**`, true)
+.addField(`Kullanıcılar`, `**${kullanıcılar}**`, true)
+.addField(`Botlar`, `**${botlar}**`, true)
+.addField(`Üye Durumları`, `**${message.guild.members.filter(o => o.presence.status === 'online').size}** Çevrimiçi\n**${message.guild.members.filter(i => i.presence.status === 'idle').size}** Boşta\n**${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size}** Rahatsız Etmeyin\n**${message.guild.members.filter(off => off.presence.status === 'offline').size}** Çevrimdışı/Görünmez`, true)
+message.channel.send(embed)
+}
+module.exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ["üyedurum","üyeler","durumlar","durum"],
   permLevel: 0
 };
 
-exports.help = {
-  name: 'üyeler',
-  description: 'Ping/Pong komutu. Bunun ne işe yaradığını merak ediyorum?',
-  usage: 'üyeler'
+module.exports.help = {
+  name: 'üyedurum',
+  description: 'Üye Durumlarını ve sunucudaki üye sayısını gösterir',
+  usage: 'w!üyedurum'
 };

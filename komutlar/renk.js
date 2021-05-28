@@ -9,9 +9,10 @@ module.exports.run = async (bot, message, args) => {
         if (!message.guild) user = message.author;
 
         Jimp.read(user.avatarURL, (err, image) => {
-            image.resize(295, 295).write(`./avatarr/${user.id}.png`);
+            image.resize(295, 295).write(`./renkk/${user.id}.png`);
+          image.color([{ apply: 'red', params: ['#ff0000'] }]);
           setTimeout(function() {
-                    message.channel.send(new Discord.Attachment(`./avatarr/${user.id}.png`));
+                    message.channel.send(new Discord.Attachment(`./renkk/${user.id}.png`));
                 }, 1000);
           message.channel.stopTyping();
         });

@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
                         setTimeout(() => {
                             msg.delete(`**Sigara Bitti **`);              
                             return message.channel.send(`**Sigara Bitti **`);
-                        }, 6000);
+                        }, 10000);
                     });
                 };
 
