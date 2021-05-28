@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
         Jimp.read(user, (err, image) => {
             image.resize(295, 295)
-          image.color([{ apply: 'xor', params: ['#ffff00'] }]).write(`./renkk/${user.id}.png`);
+          image.color(['#ffff00']).write(`./renkk/${user.id}.png`);
           setTimeout(function() {
                     message.channel.send(new Discord.Attachment(`./renkk/${user.id}.png`));
                 }, 1000);
