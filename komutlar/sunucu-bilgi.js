@@ -10,7 +10,7 @@ const embed = new Discord.RichEmbed()
 .addField(`Kullanıcılar`, `**${kullanıcılar}**`, true)
 .addField(`Botlar`, `**${botlar}**`, true)
 .addField(`Üye Durumları`, `**${message.guild.members.filter(o => o.presence.status === 'online').size}** Çevrimiçi\n**${message.guild.members.filter(i => i.presence.status === 'idle').size}** Boşta\n**${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size}** Rahatsız Etmeyin\n**${message.guild.members.filter(off => off.presence.status === 'offline').size}** Çevrimdışı/Görünmez`, true)
-.addField(`${message.guild.members.cache.user.username.includes("☥").size}`)
+.addField(`Tagımızda Bulunan Üyeler `, `${message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("☥")).size}`)
 message.channel.send(embed)
 }
 module.exports.conf = {
