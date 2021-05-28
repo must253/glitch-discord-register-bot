@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const db = require('quick.db')
 const settings = require('../ayarlar.json')
   //CodeArius
 exports.run = async (client, message, args) => {
@@ -26,8 +25,7 @@ let kadınRol2 = '842418432916848652' //Verilecek
   if (!member) return message.channel.send(`bir kullanıcı etiketlemelisin ya da ID'sini girmelisin.`)  //CodeArius
   let isim = args[1]
   let yaş = args[2]
-  let kayıtlımı = await db.fetch(`kayıtlıkişi_${member}`)
-  let eskiismi = await db.fetch(`kayıtlıisim_${member}`)  //CodeArius
+ 
   let toplamaisim = `${isimön} ${isim} ${yaş}`
   if (!isim) return message.channel.send('Bir isim yazmalısın.')
   if (!yaş) return message.channel.send('Bir yaş yazmalısın.') //CodeArius
@@ -51,21 +49,12 @@ let kadınRol2 = '842418432916848652' //Verilecek
   //CodeArius
 
   
-  let toplam = await db.fetch(`kayıttoplam_${message.author.id}`) + 1 || '0'
-const emoji = client.emojis.find(emoji => emoji.name === "5_");
+
 
    {
-  db.add(`kayıtk_${message.author.id}`, 1)  //CodeArius
-  db.add(`kayıttoplam_${message.author.id}` , 1)
-  db.set(`kayıtlıkişi_${member}`, 'evet')
-  db.set(`kayıtlıisim_${member}`, toplamaisim)  //CodeArius
-  db.push(`eskiad_${member.id}`, toplamaisim)
-  db.add(`toplamik_${member.id}`, 1)
       let embed = new Discord.RichEmbed()
   .setColor('f5f5f5')  //CodeArius
   .setDescription(`${member} kişisinden <@&${codeariusal}> rolü alınıp <@&${codeariusver}> , <@&${kadınRol}> , <@&${kadınRol2}> rollleri verildi.
-
-<@!${message.author.id}> **Kişisinin toplam** ${toplam} **adet teyiti oldu.**
 `)
   .setAuthor(client.user.username, client.user.avatarURL)
   .setTimestamp()

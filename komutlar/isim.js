@@ -1,7 +1,6 @@
   
 
 const Discord = require('discord.js');
-const db = require('quick.db')
 
 const settings = require("../ayarlar.json")
   let cezarolu = settings.registerer
