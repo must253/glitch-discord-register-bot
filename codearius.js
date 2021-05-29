@@ -215,17 +215,17 @@ client.on("guildMemberAdd", async (member, msg) => {
     const UNREGİSTER = '842418432905183250'
      const SUPHELİ_ROLE = '842418432905183247'
      if (kurulus < 1296000000) 
-       member.roles.add(SUPHELİ_ROLE)
-     member.roles.remove(UNREGİSTER);
+       member.addRole(SUPHELİ_ROLE)
+     member.removeRole(UNREGİSTER);
      
      
      if (kurulus > 1296000000) 
-     member.roles.add(UNREGİSTER);
+     member.addRole(UNREGİSTER);
    
     var must = ayarlar.registerChannel
     if(!must) return;
      
-    const embed = new Discord.MessageEmbed()
+    const embed = new Discord.RichEmbed()
     .setTitle('Hoş Geldin!')
     .setDescription(`**Deepsy'e hoş geldin ${member} **\n\nHesabın \`${moment(member.createdTimestamp).format("DD")} ${kur[moment(member.createdTimestamp).format('MM')]} ${moment(member.createdTimestamp).format('YYYY h:mm:ss')} \`  tarihinde oluşturulmuş.  (${moment(member.createdTimestamp).add(5, 'seconds').fromNow().replace("months ago", "Ay Önce ").replace("years ago","yıl önce").replace("a year ago.","bir yıl önce").replace("a months ago","bir ay önce").replace("minutes ago","dakika önce").replace("days ago","gün önce").replace("a days ago","bir gün önce").replace("a minutes ago","bir dakika önce")}.)\n\nSunucu kurallarımız <#842418433261830242> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\nSunucumuz seninle birlikte **${member.guild.memberCount}** kişiye ulaştı! Sol tarafta bulunan <#842418433261830237> odalarından birine girerek kayıt işlemini gerçekleştirebilirsin.\n\n<@&${registery}> Rolünde ki Yetkililer seninle en kısa sürede ilgilenecektir.\n\n**Bu Kullanıcı   ${kontrol} | ${tbzaman}** `)
     .setColor('RANDOM')
