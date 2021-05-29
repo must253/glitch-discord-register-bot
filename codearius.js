@@ -158,3 +158,83 @@ client.ayarlar = {
   
     prefix: "!"
 }
+
+
+
+client.on("guildMemberAdd", async (member, msg) => {
+   
+   const registery =  "842418432937951264";
+     
+  
+   let kur = {
+			"01": "Ocak",
+			"02": "Şubat",
+			"03": "Mart",
+			"04": "Nisan",
+			"05": "Mayıs",
+			"06": "Haziran",
+			"07": "Temmuz",
+			"08": "Ağustos",
+			"09": "Eylül",
+			"10": "Ekim",
+			"11": "Kasım",
+			"12": "Aralık"
+    }
+   
+ 
+   let member2 = member.user;
+  let zaman = new Date().getTime() - member2.createdAt.getTime();
+  var user = member2;
+  var tbzaman = [];
+  if (zaman < 1296000000) {
+    tbzaman = "<:deepsy_hayir:843074510013464576>";
+  } else {
+    tbzaman = `<:deepsy_evet:843074468750295040>`;
+  }
+   
+   
+   const kurulus = new Date().getTime() - user.createdAt.getTime();
+    const gün = moment(kurulus).format("dddd");
+    var kontrol;
+    if (kurulus > 1296000000) kontrol = "Oluşturulalı 15 Gün Geçmiş!";
+    if (kurulus < 1296000000) kontrol = "Oluşturulalı 15 Gün Geçmemiş!";
+   
+   
+   var must2 = "842418433756233746"
+     if(!must2) return;
+    client.channels.get(must2).send(`**Bir Kullanıcı Katıldı! ${member}**  `).then(msg => msg.delete({timeout: 8000}));
+  
+  
+   const kurulus2 = new Date().getTime() - user.createdAt.getTime();
+    var kontrol2;
+    if (kurulus2 > 1296000000) kontrol2 = "<:deepsy_evet:843074468750295040>";
+    if (kurulus2 < 1296000000) kontrol2 = "<:deepsy_hayir:843074510013464576>";
+     
+     
+    
+    const UNREGİSTER = '842418432905183250'
+     const SUPHELİ_ROLE = '842418432905183247'
+     if (kurulus < 1296000000) 
+       member.roles.add(SUPHELİ_ROLE)
+     member.roles.remove(UNREGİSTER);
+     
+     
+     if (kurulus > 1296000000) 
+     member.roles.add(UNREGİSTER);
+   
+    var must = ayarlar.registerChannel
+    if(!must) return;
+     
+    const embed = new Discord.MessageEmbed()
+    .setTitle('Hoş Geldin!')
+    .setDescription(`**Deepsy'e hoş geldin ${member} **\n\nHesabın \`${moment(member.createdTimestamp).format("DD")} ${kur[moment(member.createdTimestamp).format('MM')]} ${moment(member.createdTimestamp).format('YYYY h:mm:ss')} \`  tarihinde oluşturulmuş.  (${moment(member.createdTimestamp).add(5, 'seconds').fromNow().replace("months ago", "Ay Önce ").replace("years ago","yıl önce").replace("a year ago.","bir yıl önce").replace("a months ago","bir ay önce").replace("minutes ago","dakika önce").replace("days ago","gün önce").replace("a days ago","bir gün önce").replace("a minutes ago","bir dakika önce")}.)\n\nSunucu kurallarımız <#842418433261830242> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\nSunucumuz seninle birlikte **${member.guild.memberCount}** kişiye ulaştı! Sol tarafta bulunan <#842418433261830237> odalarından birine girerek kayıt işlemini gerçekleştirebilirsin.\n\n<@&${registery}> Rolünde ki Yetkililer seninle en kısa sürede ilgilenecektir.\n\n**Bu Kullanıcı   ${kontrol} | ${tbzaman}** `)
+    .setColor('RANDOM')
+     if (kurulus > 1296000000) kontrol = client.channels.get(must).send(`**Deepsy'e hoş geldin ${member} **\n\nHesabın Güvenli  ${kontrol2}\n\nSunucu kurallarımız <#842418433261830242> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\nSunucumuz seninle birlikte **${member.guild.memberCount}** kişiye ulaştı! Sol tarafta bulunan <#842418433261830237> odalarından birine girerek kayıt işlemini gerçekleştirebilirsin.\n\n<@&${registery}> Rolünde ki Yetkililer seninle en kısa sürede ilgilenecektir.`);
+
+       if (kurulus < 1296000000) kontrol = client.channels.get(must).send(`** Hoş Geldin   ${member}** Seninle birlikte **${member.guild.memberCount}** kişiyiz.\n\nBu Kullanıcı Hesabı 15 Günden Önce Açılmış.  Bu Sebepten  <@&${SUPHELİ_ROLE}> Rolü Verildi!! `);
+
+     
+
+  }
+    
+  );
