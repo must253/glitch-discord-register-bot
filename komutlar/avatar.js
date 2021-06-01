@@ -3,9 +3,10 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
 
-  var user = message.mentions.users.first() || message.author || message.guild.members.get(args[0]);
+  var user = message.mentions.users.first() || message.guild.members.get(args[0]) || message.author ;
       message.channel.startTyping();
-        var user = message.mentions.users.first() || message.author;
+        var user = message.mentions.users.first() || message.guild.members.get(args[0]) || message.author;
+  
         if (!message.guild) user = message.author;
 
         Jimp.read(user.avatarURL, (err, image) => {
