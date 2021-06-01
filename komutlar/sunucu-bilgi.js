@@ -25,16 +25,18 @@ message.channel.send(embed)
   
   
   if(taglı_üyeler) {
-     const tagı_aldı = new Discord.RichEmbed()
-.setDescription(`**${üye_id}** sunucudaki taglıları kontrol ederken tagının olduğunu farkettim ve <@&842418432926679063> Rolünü verdim!!**`)
-.setTimestamp()
-.setFooter('')
-.setColor('RANDOM')
+     
+
+    
+      const üye_id = message.guild.members.get(taglı_üyeler.map(x => `${x.id}`))
+
     
     
-    if(!message.member.roles.has(ayarlar.tag_rolü_id)) message.guild.channels.get('849351836049211452').send(tag_aldı)  üye_id.addRole(ayarlar.tag_rolü_id);
+    if(!message.member.roles.has(ayarlar.tag_rolü_id))  üye_id.addRole(ayarlar.tag_rolü_id) 
+    message.guild.channels.get('842418433756233746').send(`**${üye_id}** sunucudaki taglıları kontrol ederken tagının olduğunu farkettim ve <@&842418432926679063> Rolünü verdim!!**`)
                    }
-  if(!taglı_üyeler){if(message.member.roles.has(ayarlar.tag_rolü_id)) üye_id.removeRole(ayarlar.tag_rolü_id);
+  if(!taglı_üyeler){if(message.member.roles.has(ayarlar.tag_rolü_id)) üye_id.removeRole(ayarlar.tag_rolü_id)
+                    message.guild.channels.get('849351836049211452').send(`**${üye_id}** sunucudaki taglıları kontrol ederken tagının olmayıp <@&842418432926679063> rolüne sahip olduğunu farkettim ve rolü aldım!!**`)
                    }
   
   
