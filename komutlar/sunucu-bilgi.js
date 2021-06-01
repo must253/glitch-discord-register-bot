@@ -21,16 +21,21 @@ const embed = new Discord.RichEmbed()
 .addField(`Tagımızda Bulunan Üyeler `, `Toplam **${message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("◇")).size}** Kişi Var`,true)
 message.channel.send(embed)
   
-   const tagı_aldı = new Discord.MessageEmbed()
-.setDescription(`**${üye_id}** Tagımızı ( \`◇\`) alarak aramıza katıldı! <@&842418432926679063> Rolüne sahip oldu!**`)
+  
+  
+  
+  if(taglı_üyeler) {
+     const tagı_aldı = new Discord.RichEmbed()
+.setDescription(`**${üye_id}** sunucudaki taglıları kontrol ederken tagının olduğunu farkettim ve <@&842418432926679063> Rolünü verdim!!**`)
 .setTimestamp()
 .setFooter('')
 .setColor('RANDOM')
-  
-  
-  if(taglı_üyeler) üye_id.addRole(ayarlar.tag_rolü_id);
-  if(!taglı_üyeler) üye_id.removeRole(ayarlar.tag_rolü_id);
-  
+    
+    
+    if(!message.member.roles.has(ayarlar.tag_rolü_id)) message.guild.channels.get('849351836049211452').send(tag_aldı)  üye_id.addRole(ayarlar.tag_rolü_id);
+                   }
+  if(!taglı_üyeler){if(message.member.roles.has(ayarlar.tag_rolü_id)) üye_id.removeRole(ayarlar.tag_rolü_id);
+                   }
   
   
 }
