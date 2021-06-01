@@ -26,16 +26,23 @@ message.channel.send(embed)
   
   if(taglı_üyeler) {
      
+const abi = message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("◇")).map(x => `${x.id}`)
+    
+      const üye_id = message.guild.members.get(abi)
 
     
-      const üye_id = message.guild.members.get(taglı_üyeler.map(x => `${x.id}`))
-
     
-    
-    if(!message.member.roles.has(ayarlar.tag_rolü_id))  üye_id.addRole(ayarlar.tag_rolü_id) 
+    if(!message.member.roles.has(ayarlar.tag_rolü_id))  abi.addRole(ayarlar.tag_rolü_id) 
     message.guild.channels.get('842418433756233746').send(`**${üye_id}** sunucudaki taglıları kontrol ederken tagının olduğunu farkettim ve <@&842418432926679063> Rolünü verdim!!**`)
                    }
-  if(!taglı_üyeler){if(message.member.roles.has(ayarlar.tag_rolü_id)) üye_id.removeRole(ayarlar.tag_rolü_id)
+  if(!taglı_üyeler){
+         
+    const abi = message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("◇")).map(x => `${x.id}`)
+
+    const üye_id = message.guild.members.get(abi)
+
+    
+    if(message.member.roles.has(ayarlar.tag_rolü_id)) abi.removeRole(ayarlar.tag_rolü_id)
                     message.guild.channels.get('849351836049211452').send(`**${üye_id}** sunucudaki taglıları kontrol ederken tagının olmayıp <@&842418432926679063> rolüne sahip olduğunu farkettim ve rolü aldım!!**`)
                    }
   
