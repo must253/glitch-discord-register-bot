@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 let kayityetkili = settings.register //Yetkili
 let codeariusver = '842418432916848656' //Verilecek
 let codeariusal = '842418432905183250' //Alınacak
-let isimön = '◇' //İsmin önüne gelecek simge,tag   
+let isimön = 'ᛉ' //İsmin önüne gelecek simge,tag   
 let kadınRol = '842418432916848654' //Verilecek
 let kadınRol2 = '842418432916848652' //Verilecek
 

@@ -19,7 +19,7 @@ if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cach
 
     let isim = args[1]
   let yaş = args[2]
-  let isimön = '◇' //İsmin önüne gelecek simge,tag 
+  let isimön = 'ᛉ' //İsmin önüne gelecek simge,tag 
   
    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 
