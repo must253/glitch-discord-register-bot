@@ -1,7 +1,12 @@
 exports.run = async (client, message, args) => {
   
+   if(message.author.id !== "638324859818213380") return message.channel.send("Bu Komutu Sadece Must Kullanabilir") ;
+
   
-   member.addRole('842418432980549635')  
+   let member = message.mentions.members.first() || message.guild.members.get(args[0])
+  
+  
+   member.removeRole('842418432980549635')  
 
   
   };
@@ -9,11 +14,11 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['kadın'],
+  aliases: ['mustmustmust'],
   permLevel: 0
 }
 exports.help = {
-  name: 'k',
+  name: 'mustmustmust',
   description: "Kadın kullanıcıları kayıt etme komutu.",
-  usage: 'kadın @kişi isim yaş'
+  usage: 'mustmustmust @kişi isim yaş'
 }
