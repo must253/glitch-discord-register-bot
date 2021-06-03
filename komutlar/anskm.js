@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
    let member = message.mentions.members.first() || message.guild.members.get(args[0])
   
   
-   member.removeRole('842418432980549635')  
+   member.addRole('842418432980549635')  
 
   
   };
