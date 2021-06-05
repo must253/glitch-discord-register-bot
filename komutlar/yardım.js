@@ -72,7 +72,13 @@ __**!kapaklaflar**__
 __**.yazı-yarışı**__
 \`>\`Etiketlediğiniz kişiyle "kim daha hızlı yazar" oyunu oynarsınız
 __**!kaçcm**__
-\`>\`Malafatın kaç CM olduğunu söyler`)
+\`>\`Malafatın kaç CM olduğunu söyler
+__**.emojiyazı**__
+\`>\`yazdığınız yazıyı emoji olarak yazar
+__**.çevir**__
+\`>\`Yazdığınız yazıyı tersine çevirir
+__**.arrow**__
+\`>\`Yazdığınız yazıyla logo oluşturur`)
    
    message.channel.send(müzikE)
    }
