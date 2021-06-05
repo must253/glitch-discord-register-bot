@@ -238,3 +238,6 @@ client.on("guildMemberAdd", async (member, msg) => {
   }
     
   );
+
+
+
