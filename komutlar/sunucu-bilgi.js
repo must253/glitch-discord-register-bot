@@ -9,8 +9,12 @@ module.exports.run = async (bot, message, args) => {
     let üyesayi = message.guild.memberCount;
     let botlar = message.guild.members.filter(m => m.user.bot).size;
     let kullanıcılar = üyesayi - botlar;
-  const taglı_üyeler = message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("◇"));
-  const üye_id = message.guild.members.get(taglı_üyeler.map(x => `${x.id}`))
+  const taglı_üyeler = message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("ᛉ")).size;
+    const taglı_üyeler2 = message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes(" ᛉ")).size;
+  const taglı_üyeler3 = message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("ᛉ ")).size;
+
+  const toplam_taglı = taglı_üyeler2 + taglı_üyeler + taglı_üyeler3;
+  
 const embed = new Discord.RichEmbed()
 .setColor(`#CE2D0B`)
 .setTimestamp()
@@ -18,7 +22,7 @@ const embed = new Discord.RichEmbed()
 .addField(`Kullanıcılar`, `**${kullanıcılar}**`, true)
 .addField(`Botlar`, `**${botlar}**`, true)
 .addField(`Üye Durumları`, `**${message.guild.members.filter(o => o.presence.status === 'online').size}** Çevrimiçi\n**${message.guild.members.filter(i => i.presence.status === 'idle').size}** Boşta\n**${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size}** Rahatsız Etmeyin\n**${message.guild.members.filter(off => off.presence.status === 'offline').size}** Çevrimdışı/Görünmez`, true)
-.addField(`Tagımızda Bulunan Üyeler `, `Toplam **${message.guild.members.filter(s => !s.user.bot).filter(member => member.user.username.includes("◇")).size}** Kişi Var`,true)
+.addField(`Tagımızda Bulunan Üyeler `, `Toplam **${toplam_taglı}** Kişi Var`,true)
 message.channel.send(embed)
   
   
