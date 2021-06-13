@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 exports.run = async (client,message,args) => {
   var rol = message.content.split(" ").slice(1).join(" ");
-  let role = message.guild.roles.find("name", `${rol}`)
+  let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]) || message.guild.roles.find("name", `${rol}`)
   var hata = new Discord.RichEmbed()
   .setColor("#36393F")
   .setDescription("❌ Lütfen Bir Rol İsmi Yazın `Örnek: rolbilgi Üye` **Not:Kendinizden Yüksek Rollere Bakamassınız** ");
