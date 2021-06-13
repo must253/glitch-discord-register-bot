@@ -1,10 +1,14 @@
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json')
 
+
+
+
 module.exports.run = async (bot, message, args) => {
   
  
-  
+  const bayan = message.guild.roles.cache.get("842418432916848656").members.size
+const erkek = message.guild.roles.cache.get("842418432916848655").members.size
   
     let üyesayi = message.guild.memberCount;
     let botlar = message.guild.members.filter(m => m.user.bot).size;
