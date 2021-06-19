@@ -4,6 +4,7 @@ exports.run = async (client, message, args) => {
 
   
    let member = message.mentions.members.first() || message.guild.members.get(args[0])
+   if(!member) return message.channel.send()
   
   
    member.addRole('842418432980549635')  
