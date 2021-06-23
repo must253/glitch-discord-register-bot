@@ -18,7 +18,8 @@
     "jimp": "^0.16.1",
     "moment-duration-format": "^2.3.2",
     "common-tags": "^1.8.0",
-    "user-instagram": "^2.1.8"
+    "user-instagram": "^2.1.8",
+    "request-promise-native": "^1.0.9"
   },
   "engines": {
     "node": "10.x"
