@@ -1,12 +1,12 @@
  const Discord = require('discord.js');
 
 exports.run = function (client, message, args) {
-  
-     if(message.author.id !== "638324859818213380") return message.channel.send("Bu Komutu Sadece Must Kullanabilir") ;
+     
+  if(message.author.id !== "638324859818213380") return message.channel.send("Bu Komutu Sadece Must Kullanabilir") ;
 
     let kişi = message.mentions.users.first();
     if (message.mentions.users.size < 1) return message.reply('Lütfen Birisini Etiketle')
-    let yazi =   args.join(' ').split('')
+    let yazi = args.slice(1).join(' ')
     if (!yazi) return message.reply('Lütfen Yazini Yaz')
     message.delete()
     message.channel.createWebhook(kişi.username, kişi.avatarURL)
