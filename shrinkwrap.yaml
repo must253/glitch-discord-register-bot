@@ -1,6 +1,7 @@
 dependencies:
   chalk: 4.1.1
   common-tags: 1.8.0
+  discord-buttons: 3.2.1
   discord.js: 11.6.4
   express: 4.17.1
   jimp: 0.16.1
@@ -725,6 +726,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+  /discord-buttons/3.2.1:
+    dev: false
+    resolution:
+      integrity: sha512-UN5xOLG0TwTX6Qr/hjdSyP63HxOYxs5saxfdJ/vijSqjfa/yVPgxO2InKF0l8rpsDOVMsLWGDFLI3+Ax97/LOg==
   /discord.js/11.6.4:
     dependencies:
       long: 4.0.0
@@ -1891,6 +1896,7 @@ shrinkwrapVersion: 3
 specifiers:
   chalk: ^4.1.0
   common-tags: ^1.8.0
+  discord-buttons: ^3.2.1
   discord.js: ^11.6.4
   express: ^4.17.1
   jimp: ^0.16.1
