@@ -18,8 +18,7 @@
     "jimp": "^0.16.1",
     "moment-duration-format": "^2.3.2",
     "common-tags": "^1.8.0",
-    "user-instagram": "^2.1.8",
-    "discord-buttons": "^3.2.1"
+    "user-instagram": "^2.1.8"
   },
   "engines": {
     "node": "10.x"
