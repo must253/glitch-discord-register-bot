@@ -3,6 +3,7 @@ dependencies:
   common-tags: 1.8.0
   discord.js: 11.6.4
   express: 4.17.1
+  figlet: 1.5.0
   jimp: 0.16.1
   moment: 2.29.1
   moment-duration-format: 2.3.2
@@ -854,6 +855,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
+  /figlet/1.5.0:
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha512-ZQJM4aifMpz6H19AW1VqvZ7l4pOE9p7i/3LyxgO2kp+PO/VcDYNqIHEMtkccqIhTXMKci4kjueJr/iCQEaT/Ww==
   /file-type/9.0.0:
     dev: false
     engines:
@@ -1893,6 +1900,7 @@ specifiers:
   common-tags: ^1.8.0
   discord.js: ^11.6.4
   express: ^4.17.1
+  figlet: ^1.5.0
   jimp: ^0.16.1
   moment: ^2.28.0
   moment-duration-format: ^2.3.2

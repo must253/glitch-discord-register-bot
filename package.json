@@ -18,7 +18,8 @@
     "jimp": "^0.16.1",
     "moment-duration-format": "^2.3.2",
     "common-tags": "^1.8.0",
-    "user-instagram": "^2.1.8"
+    "user-instagram": "^2.1.8",
+    "figlet": "^1.5.0"
   },
   "engines": {
     "node": "10.x"
