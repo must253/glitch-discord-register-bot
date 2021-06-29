@@ -22,7 +22,7 @@ const embed = new Discord.RichEmbed()
 .addField(`Kullanıcılar`, `**${kullanıcılar}**`, true)
 .addField(`Botlar`, `**${botlar}**`, true)
 .addField(`Üye Durumları`, `**${message.guild.members.filter(o => o.presence.status === 'online').size}** Çevrimiçi\n**${message.guild.members.filter(i => i.presence.status === 'idle').size}** Boşta\n**${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size}** Rahatsız Etmeyin\n**${message.guild.members.filter(off => off.presence.status === 'offline').size}** Çevrimdışı/Görünmez`, true)
-.addField(`Tagımızda Bulunan Üyeler `, `Toplam **${toplam_taglı}** Kişi Var`,true)
+.addField(`Tagımızda Bulunan Üyeler `, `Toplam **${taglı_üyeler}** Kişi Var`,true)
 message.channel.send(embed)
   
   
@@ -37,5 +37,5 @@ module.exports.conf = {
 module.exports.help = {
   name: 'üyedurum',
   description: 'Üye Durumlarını ve sunucudaki üye sayısını gösterir',
-  usage: 'w!üyedurum'
+  usage: '!üyedurum'
 };
