@@ -1,5 +1,5 @@
 
-var figlet = require('figlet');
+  var figlet = require('figlet');
 
 module.exports.run = (client, message, args, tools) => {
   
