@@ -48,11 +48,6 @@ must.locale("tr")
           : "Şu an oyun oynamıyor"
       )
       .addField("BOT mu?", message.author.bot ? "\n Evet" : "Hayır");
-    console.log(
-      "!kullanıcıbilgim komutu " +
-        message.author.username +
-        " tarafından kullanıldı."
-    );
     return message.channel.sendEmbed(kullanicibilgimk);
   }
 };
