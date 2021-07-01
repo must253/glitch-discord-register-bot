@@ -199,10 +199,7 @@ client.on("guildMemberAdd", async (member, msg) => {
     if (kurulus > 1296000000) kontrol = "Oluşturulalı 15 Gün Geçmiş!";
     if (kurulus < 1296000000) kontrol = "Oluşturulalı 15 Gün Geçmemiş!";
    
-   
-   var must2 = "842418433756233746"
-     if(!must2) return;
-    client.channels.get(must2).send(`**Bir Kullanıcı Katıldı! ${member}**  `).then(msg => msg.delete({timeout: 8000}));
+  
   
   
    const kurulus2 = new Date().getTime() - user.createdAt.getTime();
