@@ -210,7 +210,7 @@ client.on("guildMemberAdd", async (member, msg) => {
     if (kurulus2 > 1296000000) kontrol2 = "<:deepsy_evet:843074468750295040>";
     if (kurulus2 < 1296000000) kontrol2 = "<:deepsy_hayir:843074510013464576>";
      
-     
+     const Webhook = new Discord.WebhookClient(process.env.webhookid , process.env.webhooktoken)
     
     const UNREGİSTER = '842418432905183250'
      const SUPHELİ_ROLE = '842418432905183247'
@@ -229,9 +229,9 @@ client.on("guildMemberAdd", async (member, msg) => {
     .setTitle('Hoş Geldin!')
     .setDescription(`**Deepsy'e hoş geldin ${member} **\n\nHesabın \`${moment(member.createdTimestamp).format("DD")} ${kur[moment(member.createdTimestamp).format('MM')]} ${moment(member.createdTimestamp).format('YYYY h:mm:ss')} \`  tarihinde oluşturulmuş.  (${moment(member.createdTimestamp).add(5, 'seconds').fromNow().replace("months ago", "Ay Önce ").replace("years ago","yıl önce").replace("a year ago.","bir yıl önce").replace("a months ago","bir ay önce").replace("minutes ago","dakika önce").replace("days ago","gün önce").replace("a days ago","bir gün önce").replace("a minutes ago","bir dakika önce")}.)\n\nSunucu kurallarımız <#842418433261830242> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\nSunucumuz seninle birlikte **${member.guild.memberCount}** kişiye ulaştı! Sol tarafta bulunan <#842418433261830237> odalarından birine girerek kayıt işlemini gerçekleştirebilirsin.\n\n<@&${registery}> Rolünde ki Yetkililer seninle en kısa sürede ilgilenecektir.\n\n**Bu Kullanıcı   ${kontrol} | ${tbzaman}** `)
     .setColor('RANDOM')
-     if (kurulus > 1296000000) kontrol = client.channels.get(must).send(`**Deepsy'e hoş geldin ${member} **\n\nHesabın Güvenli  ${kontrol2}\n\nSunucu kurallarımız <#842418433261830242> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\nSunucumuz seninle birlikte **${member.guild.memberCount}** kişiye ulaştı! Sol tarafta bulunan <#842418433261830237> odalarından birine girerek kayıt işlemini gerçekleştirebilirsin.\n\n<@&${registery}> Rolünde ki Yetkililer seninle en kısa sürede ilgilenecektir.`);
+     if (kurulus > 1296000000) kontrol = Webhook.send(`**Deepsy'e hoş geldin ${member} **\n\nHesabın Güvenli  ${kontrol2}\n\nSunucu kurallarımız <#842418433261830242> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\nSunucumuz seninle birlikte **${member.guild.memberCount}** kişiye ulaştı! Sol tarafta bulunan <#842418433261830237> odalarından birine girerek kayıt işlemini gerçekleştirebilirsin.\n\n<@&${registery}> Rolünde ki Yetkililer seninle en kısa sürede ilgilenecektir.`);
 
-       if (kurulus < 1296000000) kontrol = client.channels.get(must).send(`** Hoş Geldin   ${member}** Seninle birlikte **${member.guild.memberCount}** kişiyiz.\n\nBu Kullanıcı Hesabı 15 Günden Önce Açılmış.  Bu Sebepten  <@&${SUPHELİ_ROLE}> Rolü Verildi!! `);
+       if (kurulus < 1296000000) kontrol = Webhook.send(`** Hoş Geldin   ${member}** Seninle birlikte **${member.guild.memberCount}** kişiyiz.\n\nBu Kullanıcı Hesabı 15 Günden Önce Açılmış.  Bu Sebepten  <@&${SUPHELİ_ROLE}> Rolü Verildi!! `);
 
      
 

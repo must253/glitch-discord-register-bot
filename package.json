@@ -3,10 +3,10 @@
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
   "version": "0.0.1",
-  "description": "CodeArius Kayıt sistemi",
-  "main": "codearius.js",
+  "description": "",
+  "main": "Must.js",
   "scripts": {
-    "start": "node codearius.js"
+    "start": "node Must.js"
   },
   "dependencies": {
     "discord.js": "^11.6.4",
