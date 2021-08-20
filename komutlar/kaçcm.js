@@ -3,9 +3,9 @@ const Discord = require("discord.js");
 
 exports.run = (client, message) => {
 
-const FwhyCode = Math.floor(Math.random() * 100) + 1;
+const must = Math.floor(Math.random() * 100) + 1;
 
-return message.channel.send(`Senin Malafat **%${FwhyCode}CM**`);
+return message.channel.send(`Senin Malafat **${must}CM**`);
 
 };
 
