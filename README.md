@@ -3,6 +3,9 @@ Merhaba,
 
 Destek amaçlı sunucumuza katılırsanız sevinirim!! 
 https://discord.gg/eTAGRuwKYD
+
+
+UNUTMAYIN!! botumuz discord.js v11 sürümündedir
   
 Botumuzu nasıl çalıştıracağımıza (ayarlamaya) geçelim
 
