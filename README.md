@@ -9,8 +9,10 @@ UNUTMAYIN!! botumuz discord.js v11 sürümündedir
   
 Botumuzu nasıl çalıştıracağımıza (ayarlamaya) geçelim
 
-1. ".env" dosyası oluşturunuz
-2. ".env" dosyamızda şunları tanımlayalım; token , webhookid , webhooktoken , webtoken , webid
-3. "ayarlar.json" dosyasına girip kendi sunucunuza göre ayarlayınız.
+
+1. Hoşgeldin mesajının geleceği kanala webhook kurunuz. 
+2. ".env" dosyası oluşturunuz.
+3. ".env" dosyamızda şunları tanımlayalım; token , webhookid , webhooktoken , webtoken , webid
+4. "ayarlar.json" dosyasına girip kendi sunucunuza göre ayarlayınız.
 
 eğer bir sorun yaşarsanız <a href="https://discord.gg/eTAGRuwKYD">discord sunucumuza</a> katılıp sorabilirsiniz
