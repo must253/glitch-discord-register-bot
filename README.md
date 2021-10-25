@@ -21,3 +21,7 @@ eğer bir sorun yaşarsanız <a href="https://discord.gg/eTAGRuwKYD">discord sun
 
 
 ᛉ D E E P S Y#7168 Bot'u
+
+
+Birisi Geldiğinde Gelen Mesaj Çıktısı:
+![image](https://user-images.githubusercontent.com/78107208/138671305-b2b7e7c8-6fa5-4515-8b52-7a59c981524e.png)
