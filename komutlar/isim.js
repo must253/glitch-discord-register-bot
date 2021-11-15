@@ -17,8 +17,9 @@ exports.run = async (client, message, args) => {
 if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cache.has(cezarolu)) return message.channel.send(`**\`»\`** Bu komutu kullanabilmek için \`Admin\` veya \`Kayıt Sorumlusu\` yetkisine sahip olman gerekmekte.`).then(x => x.delete({ timeout: 6500 }));
 
 
-    let isim = args[1]
-  let yaş = args[2]
+  let isim = args[1]
+  let isim3 = isim[0].toUpperCase();
+  let isim2 = isim3 + isim.substring(1);  let yaş = args[2]
   let isimön = 'ᛉ' //İsmin önüne gelecek simge,tag 
   
    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
@@ -32,10 +33,10 @@ if (!message.member.hasPermission("ADMINISTRATOR") && !message.member.roles.cach
   if (!age) return message.channel.send("İsmini değiştireceğin kişinin yaşını yazmalısın.")
 
   
-    member.setNickname(`${isimön} ${isim} | ${yaş}`)
+    member.setNickname(`${isimön} ${isim2} | ${yaş}`)
  let isimdeğiştikvola = new Discord.RichEmbed()
       .setColor('f5f5f5') //CodeArius
-      .setDescription(`Etiketlenen kişinin ismi Başarıyla **${isimön} ${isim} | ${yaş}** Olarak Değiştirildi`)
+      .setDescription(`Etiketlenen kişinin ismi Başarıyla **${isimön} ${isim2} | ${yaş}** Olarak Değiştirildi`)
       .setThumbnail('')
     message.channel.send(isimdeğiştikvola)
 
