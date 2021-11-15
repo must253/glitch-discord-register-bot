@@ -24,16 +24,17 @@ let kadınRol2 = '842418432916848652' //Verilecek
   let member = message.mentions.members.first() || message.guild.members.get(args[0]);
   if (!member) return message.channel.send(`bir kullanıcı etiketlemelisin ya da ID'sini girmelisin.`)  //CodeArius
   let isim = args[1]
-  let yaş = args[2]
+  let isim3 = isim[0].toUpperCase();
+  let isim2 = isim3 + isim.substring(1);  let yaş = args[2]
  
-  let toplamaisim = `${isimön} ${isim} ${yaş}`
+  let toplamaisim = `${isimön} ${isim2} ${yaş}`
   if (!isim) return message.channel.send('Bir isim yazmalısın.')
   if (!yaş) return message.channel.send('Bir yaş yazmalısın.') //CodeArius
   if (isNaN(yaş)) return message.channel.send('Yaş sadece sayı olarak kabul edilir.')
   
     //CodeArius
   setTimeout(function(){
-  member.setNickname(`${isimön} ${isim} | ${yaş}`)
+  member.setNickname(`${isimön} ${isim2} | ${yaş}`)
   },1000)
   setTimeout(function(){
   member.addRole(kadınRol  )  //CodeArius
